@@ -1,0 +1,32 @@
+﻿
+
+<div class="container">
+    <div class="row">
+
+
+        @foreach (var prod in ViewBag.products)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="~/images/@prod.prodImage" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@prod.prodName</h5>
+                    <p class="card-text">@prod.prodPrice</p>
+                    <p class="card-text">@prod.prodDesc</p>
+                    <a asp-controller="Products" asp-action="Delete" asp-route-id="@prod.id" class="btn btn-danger">Delete</a>
+                    <a asp-controller="Products" asp-action="Update" asp-route-id="@prod.id" class="btn btn-dark">Update</a>
+                </div>
+            </div>
+        }
+
+
+       
+
+
+
+
+
+
+
+    </div>
+</div>
+
